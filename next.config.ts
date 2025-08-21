@@ -2,9 +2,8 @@
 const nextConfig = {
   experimental: {
     serverActions: {
-      bodySizeLimit: '10mb',
+      bodySizeLimit: '10mb', // Tetap dipertahankan jika Anda perlu ukuran body lebih besar untuk server actions
     },
-    appDir: true, // ✅ WAJIB: pastikan App Router aktif
   },
   images: {
     remotePatterns: [
@@ -16,8 +15,8 @@ const nextConfig = {
       },
     ],
   },
-  reactStrictMode: true, // ✅ Direkomendasikan untuk dev
-  swcMinify: true,       // ✅ Build lebih cepat & kecil
+  reactStrictMode: true, // Tetap gunakan untuk pengembangan yang lebih ketat
+  // Hapus swcMinify karena sudah default
 };
 
 export default nextConfig;
