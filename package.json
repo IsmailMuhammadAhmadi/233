@@ -1,0 +1,34 @@
+{
+  "name": "kkn233-mangunarga",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "prisma migrate deploy && prisma generate && next build",
+    "postinstall": "prisma generate --data-proxy",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.13.0",
+    "@vercel/blob": "^1.1.1",
+    "cookies": "^0.9.1",
+    "cookies-next": "^6.1.0",
+    "next": "^15.4.5",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "swiper": "^11.2.10"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.4.4",
+    "prisma": "^6.13.0",
+    "tailwindcss": "^4",
+    "typescript": "^5.8.3"
+  }
+}

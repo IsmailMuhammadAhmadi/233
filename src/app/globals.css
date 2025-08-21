@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #837e7e;
+    --foreground: #ededed;
+  }
+}
+
+/* Pola untuk bagian Program Kerja */
+.bg-pattern-proker {
+  background-color: #f0f9ff; /* Warna dasar biru sangat muda */
+  background-image: repeating-linear-gradient(
+    45deg,
+    #e0f2fe 25%,
+    transparent 25%,
+    transparent 75%,
+    #e0f2fe 75%,
+    #e0f2fe
+  ),
+  repeating-linear-gradient(
+    -45deg,
+    #e0f2fe 25%,
+    transparent 25%,
+    transparent 75%,
+    #e0f2fe 75%,
+    #e0f2fe
+  );
+  background-position: 0 0, 8px 8px;
+  background-size: 16px 16px;
+}
+
+/* Pola untuk bagian Artikel */
+.bg-pattern-artikel {
+  background-color: #f7fee7; /* Warna dasar hijau sangat muda */
+  background-image: radial-gradient(#dcfce7 1px, transparent 1px);
+  background-size: 10px 10px;
+}
+
+/* --- KODE BARU UNTUK LATAR BELAKANG LOGO --- */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /* Pastikan nama file ini sesuai dengan nama file logo Anda di folder /public */
+  background-image: url('/logo-kkn.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain; /* Membuat logo pas di layar */
+  opacity: 0.05; /* Atur opacity (0.05 = 5%) */
+  z-index: -1; /* Meletakkan logo di belakang semua konten */
+  pointer-events: none; /* Memastikan logo tidak bisa di-klik */
+}
